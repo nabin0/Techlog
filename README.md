@@ -1,1 +1,2 @@
 # Techlog
+Hi #techlog accepted 
