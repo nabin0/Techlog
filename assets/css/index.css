@@ -1,0 +1,123 @@
+/* <<<Index.html>>> CSS FILE */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark: #000;
+  --light: #fff;
+}
+
+:root[theme="dark"] {
+  --dark: #fff;
+  --light: #000;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+/* -- <header> css goes here --- */
+.header-logo a img {
+  width: 100px;
+}
+.site-header {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  /* background: rgba(85, 82, 82, 0.137); */
+  justify-content: space-between;
+  padding: 0 3%;
+  align-items: center;
+}
+
+.hearder-nav {
+  padding: 0% 1%;
+  height: 60px;
+  width: 50%;
+  /* border: 2px solid red; */
+  position: relative;
+}
+
+.header-nav-list {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hearder-nav a {
+  display: inline-block;
+  margin: 0 4px;
+  width: 50%;
+  /* border: 0.1px solid red; */
+  height: 50px;
+  position: relative;
+  text-align: center;
+  box-shadow: inset -2px 2px 4px var(--light), 1px 1px 4px var(--dark);
+  color: var(--dark);
+}
+.hearder-nav a:hover{
+    color: blue;
+}
+.hearder-nav a li {
+  width: 100%;
+  border: 0.1px solid rgb(30, 168, 17);
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.hearder-nav a::before,
+.hearder-nav a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  transition: all 300ms linear;
+  background: var(--dark);
+  transition-delay: 0.2s;
+}
+.hearder-nav a li::before,
+.hearder-nav a li::after {
+  content: "";
+  width: 3px;
+  height: 0;
+  position: absolute;
+  transition: all 300ms linear;
+  background: var(--dark);
+  transition-delay: 0s;
+}
+.hearder-nav a:hover::before,
+.hearder-nav a:hover::after {
+  width: 100%;
+}
+.hearder-nav a li:hover::before,
+.hearder-nav a li:hover::after {
+  height: 100%;
+}
+.hearder-nav a::before {
+  top: 0;
+  left: 0;
+}
+.hearder-nav a::after {
+  bottom: 0;
+  right: 0;
+}
+.hearder-nav a li::before {
+  top: 0;
+  left: 0;
+}
+.hearder-nav a li::after {
+  bottom: 0;
+  right: 0;
+}
+
+
