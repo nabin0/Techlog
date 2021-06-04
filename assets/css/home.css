@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section
+{
+    position: relative;
+    width: 100%; 
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+}
+.man{
+    position: absolute;
+    bottom: 0;
+    right: 9.1rem;
+    max-width: 670px;
+    opacity: 0;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 3.5s;
+
+}
+                /* Navigation Part  */
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+header .logo
+{
+    position: relative;
+    color: #ff5990;
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 800;
+    opacity: 0;
+    animation: slide_left .5s linear forwards;
+    animation-delay: .2s;
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+}
+header ul li
+{
+    list-style: none;
+}
+header ul li a 
+{
+    display: inline-block;
+    color: #25b2c4;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 10px;
+    text-decoration: none;
+    user-select: none;
+    padding: 10px 20px;
+    opacity: 0;
+    animation: slide_top .5s linear forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+header ul li a:hover,
+header ul li a.on
+{
+    background: #2753e6;
+    color: #fff;
+    border-radius: 30px;
+}
+
+                        /* Content Part  */
+
+.content 
+{
+    position: relative;
+}
+.content .text
+{
+    position: relative;
+    max-width: 500px;
+}
+.content .text h2
+{
+    color: #0e92a3;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.1em;
+    opacity: 0;
+    animation: slide_right .5s linear forwards;
+    animation-delay: 1.4s;
+}
+
+.content .text p
+{
+    font-size: 1.2em;
+    color: #000;
+    opacity: 0;
+    animation: slide_left .5s linear forwards;
+    animation-delay: 1.74s;
+}
+.content .text a
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #2753e6;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    font-weight: 650;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slide_top .5s linear forwards;
+    animation-delay: 2s;
+}
+.content .text a:hover
+{
+    background: #000;
+    transform: translateY(-10px);
+}
+
+.icon
+{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon li
+{
+    list-style: none;
+}
+.icon li a{
+    position: relative;
+    margin-right: 12px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #141414;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: slide_right .5s linear forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+.icon li a img:hover
+{
+    transform: translateY(-2px);
+}
+.icon li a img{
+    transform: scale(.9);
+}
+
+
+/* responsive code goes here  */
+
+@media (max-width: 1000px)
+{
+    section{
+        padding: 150px 20px;
+    }
+    header{
+        padding: 25px;
+    }
+    .navigation{
+        display: none;
+    }
+    .navigation.active{
+       
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header ul li{
+        margin: 10px 0;
+    }
+    header ul li a{
+        margin-left: 0;
+        font-size: 1.5em;
+    }
+
+
+    .toggle{
+        position: relative;
+        top:20px;
+        right : 20px;
+        width :40px;
+        height :40px;
+        cursor: pointer;
+        display : flex; 
+        justify-content : center; 
+        align-items : center;
+        transition: all .5s ease-in-out;
+    }
+    .toggle.active .menu-btn{
+        z-index: 1;
+        background: transparent;
+        transform: translateX(-50px);
+    }
+    .toggle.active .menu-btn::before{
+        transform: rotate(45deg) translate(35px,-35px);
+    }
+    .toggle.active .menu-btn::after{
+        transform: rotate(-45deg) translate(35px,35px);
+    }
+    
+    .menu-btn{
+        width: 40px;
+        height: 6px;
+        background: #000;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .menu-btn::before,
+    .menu-btn::after{
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 6px;
+        background: #000;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .menu-btn::before{
+        transform: translateY(-16px);
+    }
+    .menu-btn::after{
+        transform: translateY(16px);
+    }
+		
+    .man{
+        max-width: 530px;
+        margin-bottom: 60px;
+        margin-right: -8.5rem;
+    }
+    .content .text h2{
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 800px)
+{
+    .man{
+        opacity: .7 !important;
+    }
+}
+@media (max-width: 500px)
+{
+    .man{
+        margin-bottom: 8.56rem;
+        max-width: 511px;
+        margin-right: -15.37rem;
+        overflow: hidden;
+    }
+}
+
+
+                /* animation goes here  */
+
+
+ @keyframes fade_in{
+     0%{
+         opacity: 0;
+        }
+    100%{
+         opacity: 1;
+        }
+}
+
+@keyframes slide_right{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_top{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_left{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}           
