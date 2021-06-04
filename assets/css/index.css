@@ -19,6 +19,7 @@ body {
   color: var(--dark);
   background: var(--light);
 }
+
 section {
   position: relative;
   width: 100%;
@@ -39,6 +40,7 @@ section {
   animation: fade_in 1s linear forwards;
   animation-delay: 3.5s;
 }
+
 /* Navigation Part  */
 
 header {
@@ -46,7 +48,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px 100px;
+  padding: 40px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
