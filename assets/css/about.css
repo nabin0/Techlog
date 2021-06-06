@@ -1,1 +1,72 @@
 /* About css Here */
+
+.about-us-cnt{
+    padding: 30px 100px 0;
+}
+.about-txt{
+    padding: 10px 40% 0 0 ;
+}
+
+.meet-team{
+    padding: 100px 100px;
+}
+.meet-team h2{
+    padding: 0 0 20px;
+}
+
+.flex-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    /* min-width: 320px; */
+    height: 60vh;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+    align-items: center;
+    box-shadow: -3px -1px 15px 1px  var(--dark);
+    -webkit-box-shadow: -3px -1px 15px 1px  var(--dark);
+    -moz-box-shadow: -3px -1px 15px 1px  var(--dark);
+}
+
+.card:hover .prson-desc{
+    transform: rotateY(180deg);
+}
+.card img{
+    width: auto;
+    height:100%;
+}
+.prson-desc{
+    padding: 2px;
+    text-align: center;
+      transition: 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.prson-desc h3{
+    font-weight: bold;
+}
+
+ .back {
+    backface-visibility: hidden;
+    /* position: absolute; */
+    position: relative;
+}
+.front {
+    backface-visibility: hidden;
+    /* position: absolute; */
+    position: relative;
+}
+.back {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.front {
+    z-index: 2; 
+    transform: rotateY(0deg);
+}
