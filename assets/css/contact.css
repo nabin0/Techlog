@@ -1,1 +1,119 @@
-/* Contact css Goes here */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+form {
+  margin: auto;
+  /* height: 70vh; */
+  width: 80vw;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.inpFld {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  width: 10%;
+}
+input,
+textarea {
+  display: block;
+  width: 80%;
+  height: 30px;
+  margin: 4px;
+}
+textarea {
+  display: block;
+  width: 80%;
+  height: 40%;
+  margin: 4px;
+}
+
+
+.successMsg {
+  color: green;
+  text-align: center;
+}
+
+.button {
+  border: 2px solid #d2bdff;
+  height: 50px;
+  width: 200px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  margin: 25px;}
+
+  .button::after {
+    content: "SUBMIT";
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #d2bdff;
+    transition: all 0.1s linear;
+  }
+
+  .button::before {
+    content: "";
+    position: relative;
+    display: block;
+    height: 15px;
+    width: 15px;
+    background: #d2bdff;
+    box-shadow: 0px 0px 10px 3px #0ff;
+    margin-left: -8px;
+    margin-top: -8px;
+    opacity: 0;
+    transition: all 0.1s linear;
+    border-radius: 100%;
+    animation: star 1.3s linear infinite;
+  }
+
+  @keyframes star {
+    0% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+    25% {
+      margin-left: 194px;
+      margin-top: -8px;
+    }
+
+    50% {
+      margin-left: 194px;
+      margin-top: 50px;
+    }
+    75% {
+      margin-left: -8px;
+      margin-top: 50px;
+    }
+    100% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+  }
+
+.button:hover::before {
+      opacity: 1;
+      animation: star 1.3s linear infinite;
+    }
+
+    .button:hover::after {
+      content: "Click Here";
+      text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc,
+        0 0 30px #82bedc, 0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
+    }
+

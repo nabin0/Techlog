@@ -1,160 +1,164 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  :root {
-    --dark: #000;
-    --light: #fff;
-  }
-  
-  :root[theme="dark"] {
-    --dark: #fff;
-    --light: #000;
-  }
-  body {
-    color: var(--dark);
-    background: var(--light);
-  }
-  
-  section {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 100px 20px 20px 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: var(--dark);
-    overflow-x: hidden;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --dark: #000;
+  --light: #fff;
+  --opqBlack: rgba(0, 0, 0, 0.1);
+  --opWhite: rgba(255, 255, 255, 0.1);
+}
 
-  
-  /* Navigation Part  */
-  
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-  }
-  header .logo {
-    position: relative;
-    color: #ff5990;
-    display: inline-block;
-    font-size: 2em;
-    text-decoration: none;
-    font-weight: 800;
-    opacity: 0;
-    animation: slide_left 0.5s linear forwards;
-    animation-delay: 0.2s;
-  }
-  
-  .hearder-nav li {
-    margin: 0 4px;
-    width: 50%;
-    height: 50px;
-    position: relative;
-    text-align: center;
-    box-shadow: inset -2px 2px 4px var(--light), 1px 1px 4px var(--dark);
-    color: var(--dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-  }
-  .hearder-nav li a:hover {
-    color: blue;
-  }
-  .hearder-nav li a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .hearder-nav li::before,
-  .hearder-nav li::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    position: absolute;
-    transition: all 300ms linear;
-    background: var(--dark);
-    transition-delay: 0.2s;
-  }
-  .hearder-nav li a::before,
-  .hearder-nav li a::after {
-    content: "";
-    width: 3px;
-    height: 0;
-    position: absolute;
-    transition: all 300ms linear;
-    background: var(--dark);
-    transition-delay: 0s;
-  }
-  .hearder-nav li:hover::before,
-  .hearder-nav li:hover::after {
-    width: 100%;
-  }
-  .hearder-nav li a:hover::before,
-  .hearder-nav li a:hover::after {
-    height: 100%;
-  }
-  .hearder-nav li::before {
-    top: 0;
-    left: 0;
-  }
-  .hearder-nav li::after {
-    bottom: 0;
-    right: 0;
-  }
-  .hearder-nav li a::before {
-    top: 0;
-    left: 0;
-  }
-  .hearder-nav li a::after {
-    bottom: 0;
-    right: 0;
-  }
-  
-  header ul {
-    position: relative;
-    display: flex;
-    list-style-type: none;
-    width: 60%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  header ul li {
-    list-style: none;
-  }
-  
-  header ul li a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    color: var(--dark);
-    font-weight: bold;
-    text-decoration: none;
-    user-select: none;
-    padding: 10px 20px;
-    opacity: 0;
-    animation: slide_top 0.5s linear forwards;
-    animation-delay: calc(0.2s * var(--i));
-  }
-  
+:root[theme="dark"] {
+  --dark: #fff;
+  --light: #000;
+    --opqBlack: rgba(255, 255, 255, 0.349);
+  --opWhite: rgba(163, 142, 142, 0.1);
+}
+body {
+  color: var(--dark);
+  font-family: "Poppins", sans-serif;
+  background: var(--light);
+}
+.on {
+  background: var(--dark);
+  color: blue;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 100px 20px 20px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--dark);
+  overflow-x: hidden;
+}
 
-  
+/* Navigation Part  */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+header .logo {
+  position: relative;
+  color: #ff5990;
+  display: inline-block;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: 800;
+  opacity: 0;
+  animation: slide_left 0.5s linear forwards;
+  animation-delay: 0.2s;
+}
+
+.hearder-nav li {
+  margin: 0 4px;
+  width: 50%;
+  height: 50px;
+  position: relative;
+  text-align: center;
+  box-shadow: inset -2px 2px 4px var(--light), 1px 1px 4px var(--dark);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+.hearder-nav li a:hover {
+  color: blue;
+}
+.hearder-nav li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.hearder-nav li::before,
+.hearder-nav li::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  transition: all 300ms linear;
+  background: var(--dark);
+  transition-delay: 0.2s;
+}
+.hearder-nav li a::before,
+.hearder-nav li a::after {
+  content: "";
+  width: 3px;
+  height: 0;
+  position: absolute;
+  transition: all 300ms linear;
+  background: var(--dark);
+  transition-delay: 0s;
+}
+.hearder-nav li:hover::before,
+.hearder-nav li:hover::after {
+  width: 100%;
+}
+.hearder-nav li a:hover::before,
+.hearder-nav li a:hover::after {
+  height: 100%;
+}
+.hearder-nav li::before {
+  top: 0;
+  left: 0;
+}
+.hearder-nav li::after {
+  bottom: 0;
+  right: 0;
+}
+.hearder-nav li a::before {
+  top: 0;
+  left: 0;
+}
+.hearder-nav li a::after {
+  bottom: 0;
+  right: 0;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  list-style-type: none;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: var(--dark);
+  font-weight: bold;
+  text-decoration: none;
+  user-select: none;
+  padding: 10px 20px;
+  opacity: 0;
+  animation: slide_top 0.5s linear forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
 /* animation goes here  */
 
 @keyframes fade_in {
@@ -197,4 +201,113 @@
     transform: translateX(0px);
     opacity: 1;
   }
+}
+
+/*
+   Copied From  Dont Know
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+  display: inline-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: var(--light);
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: var(--light);
+  color: var(--light);
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px var(--opqBlack);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: var(--light);
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px var(--opqBlack);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: var(--light);
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: var(--light);
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: var(--light);
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: var(--light);
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: var(--light);
 }

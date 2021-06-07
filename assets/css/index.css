@@ -20,6 +20,11 @@ body {
   background: var(--light);
 }
 
+.active {
+  color: blue;
+  background: #000;
+}
+
 section {
   position: relative;
   width: 100%;
@@ -81,13 +86,7 @@ header .logo {
 .hearder-nav li a:hover {
   color: blue;
 }
-.hearder-nav li a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
+
 .hearder-nav li::before,
 .hearder-nav li::after {
   content: "";
@@ -144,23 +143,31 @@ header ul {
 }
 
 header ul li {
+  background: #000;
   list-style: none;
 }
 
 header ul li a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
   color: var(--dark);
   font-weight: bold;
   text-decoration: none;
+  background: #2753e6;
   user-select: none;
   padding: 10px 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   opacity: 0;
   animation: slide_top 0.5s linear forwards;
   animation-delay: calc(0.2s * var(--i));
 }
 
+header ul li a {
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+}
 /* Content Part  */
 
 .content {

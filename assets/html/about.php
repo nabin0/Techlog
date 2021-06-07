@@ -1,4 +1,4 @@
-<?php $title="About Us - Techlog";  include '../../templates/top.php'; ?>
+<?php $title="About Us - Techlog"; $aboutOn=' class="on" '; include '../../templates/top.php'; ?>
 <style>
     <?php include '../../templates/style.css' ?>
     <?php include '../css/about.css' ?>
