@@ -59,9 +59,37 @@ header .logo {
   text-decoration: none;
   font-weight: 800;
   opacity: 0;
-  animation: slide_left 0.5s linear forwards;
+  animation: slide_left 0.5s linear forwards , Color 1s linear infinite;
   animation-delay: 0.2s;
 }
+
+
+@keyframes Color{
+  0%{
+    color:#f50909;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  40%{
+    color:#f3ef09;
+  }
+  
+  60%{
+    color:#28f100;
+  }
+  
+  80%{
+    color:#ED5565;
+  }
+  
+  100%{
+    color:#0789f3;
+  }
+}
+
 
 .hearder-nav li {
   margin: 0 4px;
