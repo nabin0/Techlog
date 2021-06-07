@@ -1,0 +1,1 @@
+no one is allowed to access this repository without the permission of the repo-manager, doing so will be an offence and the convict will be charged based on the type of repo he cloned or copied from our repo.
