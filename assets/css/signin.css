@@ -1,0 +1,58 @@
+.container{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+.container h3{
+    text-align: center;
+    color: var(--dark);
+    margin: 10px 0;
+}
+.container form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+form .inprow{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 10px 0px;
+}
+label{
+    display: inline-block;
+    width: 15%;
+    font-weight: bold;
+    font-family: cursive;
+}
+input{
+    width: 80%;
+    color: blue;
+    font-weight: bold;
+    font-family: cursive;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    background: none;
+height: 30px;
+}
+
+button{
+    border: 2px solid #d2bdff;
+    height: 50px;
+    width: 200px;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    margin: 25px;
+    background: var(--dark);
+    color: var(--light);
+    align-self: center;
+    opacity: 0.7;
+    transition: all 200ms linear;
+}
+button:hover {
+    opacity: 1;
+  }
