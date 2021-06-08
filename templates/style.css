@@ -9,12 +9,16 @@
   --light: #fff;
   --opqBlack: rgba(0, 0, 0, 0.1);
   --opWhite: rgba(255, 255, 255, 0.1);
+  --paledark : #1a1b1a;
+  --palelight : #d3d3d3;
 }
 
 :root[theme="dark"] {
   --dark: #fff;
   --light: #000;
     --opqBlack: rgba(255, 255, 255, 0.349);
+  --paledark : #ececec;
+  --palelight : #1a1b1a;
   --opWhite: rgba(163, 142, 142, 0.1);
 }
 body {
