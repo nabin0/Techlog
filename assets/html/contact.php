@@ -7,22 +7,28 @@
 <?php 
 $conSucced = false;
 if (isset($_POST['name'])){
+    // Connection to database
 $server = "localhost";
 $username = "root";
 $password = "";
 $dbname = "user";
-
 $con = mysqli_connect($server, $username, $password, $dbname);
 
+// storing all inputs into variables
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $msg = $_POST['msg'];
+
+// Inserting input data into database (Using sql query)
 $sql =" INSERT INTO `userinfo` (`name`, `email`, `phone`, `msg`, `date`) VALUES ('$name', '$email', '$phone', '$msg', current_timestamp())";
-if ($con->query($sql) == true){
+
+// Checking if connection is successfull or not
+if  ($con->query($sql) == true){
     $conSucced = true;
 }
 
+// Closing connection
 $con->close();}
 ?>
 

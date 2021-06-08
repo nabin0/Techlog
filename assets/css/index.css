@@ -20,11 +20,6 @@ body {
   background: var(--light);
 }
 
-.active {
-  color: blue;
-  background: #000;
-}
-
 section {
   position: relative;
   width: 100%;
@@ -143,7 +138,7 @@ header ul {
 }
 
 header ul li {
-  background: #000;
+  background: var(--light);
   list-style: none;
 }
 
@@ -151,7 +146,6 @@ header ul li a {
   color: var(--dark);
   font-weight: bold;
   text-decoration: none;
-  background: #2753e6;
   user-select: none;
   padding: 10px 20px;
   width: 100%;
@@ -161,13 +155,10 @@ header ul li a {
   align-items: center;
   opacity: 0;
   animation: slide_top 0.5s linear forwards;
+  border-radius: 30px;
   animation-delay: calc(0.2s * var(--i));
 }
 
-header ul li a {
-  color: rgb(0, 0, 0);
-  border-radius: 30px;
-}
 /* Content Part  */
 
 .content {
