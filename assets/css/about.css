@@ -1,72 +1,77 @@
-/* About css Here */
 
-.about-us-cnt{
-    padding: 30px 100px 0;
-}
-.about-txt{
-    padding: 10px 40% 0 0 ;
-}
+                                /* shehzad css goes here  */
 
-.meet-team{
-    padding: 100px 100px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.meet-team h2{
-    padding: 0 0 20px;
+.container .about-us-cnt{
+    margin: 30px 10px;
 }
-
-.flex-div{
+.container .about-us-cnt h2{
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+.container .about-us-cnt p{
+    margin-bottom: 5px;
+}
+.container .meet-team {
+    margin-left: 10px;
+    /* display: flex; */
+}
+.container .meet-team h2{
+    font-size: 2em;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+.container .meet-team .flex-div{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
-.card{
-    /* min-width: 320px; */
-    height: 60vh;
+.container .meet-team .flex-div .card{
+    position: relative;
+    width: 400px;
+    height: 400px;
     margin: 20px;
-    display: flex;
-    justify-content: center;
-    transition: 0.5s;
-    transform-style: preserve-3d;
-    position: relative;
-    align-items: center;
     box-shadow: -3px -1px 15px 1px  var(--dark);
-    -webkit-box-shadow: -3px -1px 15px 1px  var(--dark);
-    -moz-box-shadow: -3px -1px 15px 1px  var(--dark);
+    overflow: hidden;
 }
-
-.card:hover .prson-desc{
-    transform: rotateY(180deg);
-}
-.card img{
-    width: auto;
-    height:100%;
-}
-.prson-desc{
-    padding: 2px;
-    text-align: center;
-      transition: 0.5s;
-    transform-style: preserve-3d;
+.container .meet-team .flex-div .card img{
     position: relative;
+    width: 100%;
+    height: 100%;
 }
-.prson-desc h3{
-    font-weight: bold;
+.container .meet-team .flex-div .card .prson-desc{
+    transition: .5s;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
 }
-
- .back {
-    backface-visibility: hidden;
-    /* position: absolute; */
-    position: relative;
+.container .meet-team .flex-div .card:hover .prson-desc{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.front {
-    backface-visibility: hidden;
-    /* position: absolute; */
-    position: relative;
+.container .meet-team .flex-div .card .prson-desc h3{
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 20px 20px;
+    margin-top: 40px;
 }
-.back {
-    z-index: 1;
-    transform: rotateY(180deg);
-}
-.front {
-    z-index: 2; 
-    transform: rotateY(0deg);
+.container .meet-team .flex-div .card .prson-desc h4{
+    font-size: 1em;
+    font-weight: 400;
 }
