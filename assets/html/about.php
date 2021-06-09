@@ -8,7 +8,7 @@
 <div class="container">
     <div class="about-us-cnt">
         <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur  adipisci laborum, totam eius sint explicabo eum unde blanditiis. Eligendi placeat totam alias fugiat assumenda! Nihil, iste consectetur vero possimus molestiae est esse repellat ducimus quam dolores nostrum. Quod, voluptatum!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur  adipisci laborum, totam eius sint explicabo eum unde blanditiis. Eligendi placeat totam alias fugiat assumenda! Nihil, iste consectetur vero possimus molestiae est esse repellat ducimus quam dolores nostrum. Quod, voluptatumgendi placeat totam alias fugiat assumenda! Nihil, iste consectetur vero possimus molestiae est esse repellat ducimus quam dolores nostrum. Quod, voluptatumgendi placeat totam alias fugiat assumenda! Nihil, iste consectetur vero possimus molestiae est esse repellat ducimus quam dolores nostrum. Quod, voluptatum!</p>
     </div>
 
     <div class="meet-team">
