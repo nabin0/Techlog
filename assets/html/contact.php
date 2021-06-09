@@ -3,63 +3,36 @@
     <?php include '../../templates/style.css' ?>
     <?php include '../css/contact.css' ?>
 </style>
-
 <?php 
-$conSucced = false;
-if (isset($_POST['name'])){
-    // Connection to database
-$server = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user";
-$con = mysqli_connect($server, $username, $password, $dbname);
-
-// storing all inputs into variables
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$msg = $_POST['msg'];
-
-// Inserting input data into database (Using sql query)
-$sql =" INSERT INTO `userinfo` (`name`, `email`, `phone`, `msg`, `date`) VALUES ('$name', '$email', '$phone', '$msg', current_timestamp())";
-
-// Checking if connection is successfull or not
-if  ($con->query($sql) == true){
-    $conSucced = true;
-}
-
-// Closing connection
-$con->close();}
+require './php/contactUsSubmit.php';
 ?>
-
 <?php 
-if ($conSucced == true){
-    echo ' <div class="successMsg">Thanks for contacting us. We will reach you soon.</div>';
-}
+echo $displayMsg ;
 ?>
-    <form action="contact.php" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="inpFld">
             <label for="name">Name: </label>
-            <input type="text" name="name" id="myName" placeholder="Name">
+            <input type="text" name="name" id="myName" placeholder="Name"><span class="errormsg"><?php echo $nameErr ?></span>
         </div>
 
         <div class="inpFld">
             <label for="email">Email: </label>
-            <input type="text" name="email" id="myEmail" placeholder="Email">
+            <input type="text" name="email" id="myEmail" placeholder="Email"><span class="errormsg"><?php echo $emailErr ?></span>
         </div>
         <div class="inpFld">
             <label for="phone">Phone No: </label>
-            <input type="tel" name="phone" id="myPhone" placeholder="Phone Number">
+            <input type="tel" name="phone" id="myPhone" placeholder="Phone Number"><span class="errormsg"><?php echo $phoneErr ?></span>
         </div>
 
         <div class="inpFld">
             <label for="message">Message: </label>
-            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+            <textarea name="msg" id="msg" cols="30" rows="10"></textarea><span class="errormsg"><?php echo $msgErr ?></span>
         </div>
         <button class="button" name="submitForm" type="submit"></button>
         </form>
 
         <script>
     <?php include '../../templates/app.js' ?>
+    <?php include '../js/contact.js' ?>
 </script>
 <?php include '../../templates/bottom.php'; ?>

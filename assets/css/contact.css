@@ -29,15 +29,20 @@ label {
 input,
 textarea {
   display: block;
-  width: 80%;
+  width: 60%;
   height: 30px;
   margin: 4px;
 }
 textarea {
   display: block;
-  width: 80%;
+  width: 60%;
   height: 40%;
   margin: 4px;
+}
+.errormsg{
+  font-weight: bold;
+  font-size: 14px;
+  color: red;
 }
 
 .successMsg {
