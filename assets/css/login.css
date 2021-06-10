@@ -60,6 +60,7 @@ section .container .user .image-box .textOver{
     left: 0;
     display: flex;
     justify-content: center;
+    font-family: 'Gothic A1', sans-serif;
     align-items: center;
     flex-direction: column;
     height: 100%;
