@@ -6,8 +6,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container{
+    margin: 0 100px;
+}
 .container .about-us-cnt{
     margin: 30px 10px;
+    width: 60%;
 }
 .container .about-us-cnt h2{
     margin-bottom: 5px;
@@ -18,12 +22,13 @@
 }
 .container .meet-team {
     margin-left: 10px;
-    /* display: flex; */
+    margin-top: 30px;
 }
 .container .meet-team h2{
     font-size: 2em;
     margin-top: 40px;
     letter-spacing: 1px;
+    text-align: center;
 }
 .container .meet-team .flex-div{
     display: flex;

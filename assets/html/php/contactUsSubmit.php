@@ -37,10 +37,6 @@ if (empty($_POST['phone'])){
 
 }else{
     $phone =test_input( $_POST['phone']);
-    if(!preg_match('/^[0-9]{10}+$/', $phone)) {
-        $phoneErr = "Invalid Phone Number";
-      }
-
 }
 if (empty($_POST['msg'])){
     $msgErr = 'Message is required.';
@@ -59,7 +55,6 @@ if  ($con->query($sql) == true && !empty($_POST['name']) && !empty($_POST['email
         $displayMsg = ' <div class="successMsg">Thanks for contacting us. We will reach you soon.</div>';
 } else{
         $displayMsg = ' <div class="successMsg" style="color:red;" >Please Fill valid Information</div>';
-
 }
     // Closing connection
     $con->close();}
