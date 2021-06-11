@@ -1,5 +1,4 @@
 <?php 
-
 function get_blog(){
     $server = "localhost";
 $username = "root";
@@ -21,11 +20,14 @@ while ($row = mysqli_fetch_array($tdata)){
                     <p class="date">'.$row['date'].'</p>
                     <p>'.$row['seo_title'].' done</p>
                 </div>
-                <a href="#">READ</a>
+                <a type="submit" href="./post.php?q='.$row['sn'].'">READ</a>
             </div>
         </div>
     </div>
 ';
+
+
+
 }
 
 }

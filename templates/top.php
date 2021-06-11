@@ -12,7 +12,7 @@
 <body>
     <section>
         <header>
-            <a href="../../index.html" class="logo">TECHBLOG</a>
+            <a href="../../index.html" class="logo">TECHLOG</a>
             <div class="toggle">
                 <div class="menu-btn"></div>
             </div>
