@@ -45,7 +45,9 @@ echo $displayMsg ;
             <input type="text" name="cPassword" id="cPassword" placeholder="Enter same password as above"><span class="errormsg"><?php echo $cPasswordErr ?></span>
         </div>
 
-            <button type="submit" id="submitBtn">Sign in</button>
+            <button type="submit" id="submitBtn">Sign up</button>
+            <p class="signup">Already have an account <a href="login.php">Log in</a></p>
+
   
     </form>
 </div>

@@ -33,7 +33,7 @@
                       <input type="text" name="" placeholder="Username">
                       <input type="password" name="" placeholder="Password">
                       <input type="submit" name="" id="submit-btn" value="Log in">
-                      <p class="signup">Don't have an account?<a href="signin.php">Sign In</a></p>
+                      <p class="signup">Don't have an account?<a href="signup.php">Sign Up</a></p>
                   </form>
               </div>
           </div>
