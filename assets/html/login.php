@@ -1,23 +1,27 @@
 <?php $title="About Us - Techlog"; $aboutOn=' class="on" '; include '../../templates/top.php'; ?>
+<?php include './php/login_handle.php';
+?>
+
 <style>
     <?php include '../../templates/style.css' ?>
     <?php include '../css/login.css' ?>
+
 </style>
 
-
 <!-- html goes here  -->
+<?php
+echo '<div class="msg">'.$user.'</div';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/log.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap" rel="stylesheet">
-    <title>Log in page</title>
 </head>
 <body>
+    
+
+
   <section>
       <div class="container">
           <div class="user signin-box">
@@ -28,20 +32,19 @@
                 </div>
               </div>
               <div class="form-box">
-                  <form>
+                  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                       <h2>Log In</h2>
-                      <input type="text" name="" placeholder="Username">
-                      <input type="password" name="" placeholder="Password">
+                      <input type="text" name="username" placeholder="Username">
+                      <input type="password" name="password" placeholder="Password">
                       <input type="submit" name="" id="submit-btn" value="Log in">
-                      <p class="signup">Don't have an account?<a href="signin.php">Sign In</a></p>
+                      <p class="signup">Don't have an account?<a href="./signup.php">Sign In</a></p>
                   </form>
               </div>
           </div>
       </div>
   </section>  
-</body>
+  </body>
 </html>
-
 <script>
     <?php include '../../templates/app.js' ?>
 </script>

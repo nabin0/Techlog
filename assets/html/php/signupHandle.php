@@ -61,20 +61,20 @@ if(empty($_POST['password'])){
 if(empty($_POST['cPassword'])){
     $cPasswordErr = "Required";
 } else{
-    if ($password == $cPassword){
-
-        $cPassword = $_POST['cPassword'];
+    $cPassword = $_POST['cPassword'];
+    if ($password != $cPassword){
+        $cPasswordErr = "Password did not match";
     }
-    $cPasswordErr = "Password did not match";
 }
 
 if (!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['email']) && !empty($_POST['dob']) && !empty($_POST['password']) && $password == $cPassword){
 $sql = "INSERT INTO `signininfo` ( `fname`, `lname`, `phone`, `email`, `dob`, `pswd`, `confirmedPswd`) VALUES ( '$fname', '$lname', '$phone', '$email', '$dob', '$password', '$cPassword')";
 
+
 // Checking if connection is successfull or not
 if  ($con->query($sql) == true && !empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['email']) && !empty($_POST['dob']) && !empty($_POST['password']) && $password == $cPassword){
     $conSucced = true;
-    $displayMsg = ' <div class="successMsg">Your Account for TechLog is registered.</div>';
+    $displayMsg = ' <div class="successMsg">Your Account for TechLog is registered. use your firstname as username.</div>';
 } else{
     $displayMsg = ' <div class="successMsg" style="color:red;" >Please Fill valid Information</div>';
 }

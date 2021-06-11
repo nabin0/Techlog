@@ -35,6 +35,8 @@
                 <li class="header-nav-list-itm"><a href="contact.php" style="--i:2;"  <?php echo $contactOn ?>>Contact Us</a></li>
                 <li class="header-nav-list-itm"><a href="readblogs.php" style="--i:3;"  <?php echo $readOn ?>>Read Blogs</a></li>
                 <li class="header-nav-list-itm"><a href="signup.php" style="--i:4;"  <?php echo $signinOn ?>>Sign Up</a></li>
+                <li class="header-nav-list-itm"><a href="login.php" style="--i:4;">login</a></li>
+                
                 <li class="header-nav-list-itm"><a href="#" style="--i:5;">
                         <span class="themeText" id="themeMode">
                             <i class="fa fa-moon-o" id="themeText" style="font-weight: bold;">Dark</i>

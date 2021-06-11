@@ -1,6 +1,7 @@
 <?php $title="Contact Us - Techlog";  $readOn=' class="on" ';  include '../../templates/top.php'; ?>
 <style>
-    <?php include '../../templates/style.css'?><?php include '../css/readblogs.css'?>
+    <?php include '../../templates/style.css'?>
+    <?php include '../css/post.css'?>
 </style>
 
 <?php 
@@ -16,22 +17,21 @@ $query = "SELECT * FROM post WHERE sn = (select sn from post WHERE sn = $q)";
 $tdata = mysqli_query($con, $query);
 $row =  mysqli_fetch_array($tdata);
 
-echo $row[2];
-echo $q;
-      echo '
-      <div class="box">
-          <div class="card">
-              <div class="content">
-                  <img src="../image/postimg/'.$row['sn'].'.jpg" alt="">
-                  <div class="txt-content">
-                      <h3>'.$row['author'].'</h3>
-                      <p class="date">'.$row['date'].'</p>
-                      <p>'.$row['seo_title'].' done</p>
-                  </div>
-                  <a href="./post.php?id='.$row['sn'].'">READ</a>
-              </div>
-          </div>
-      </div>'
+ echo '
+        <div class="container">
+        <div class="postHead">
+        <img class="post-img" src="../image/postimg/'.$row['sn'].'.jpg" alt="">
+        <p>Author: &nbsp;<b>'.$row['author'].'</b></h3>
+        <p class="date">'.$row['date'].'</p>
+        <p class="category">'.$row['category'].'</p>
+        </div>
+            <div class="content">
+                <div class="txt-content">
+                    <h2>'.$row['title'].'</h2>
+                    <p class="content">'.$row['content'].'</p>
+                </div>
+            </div>
+ </div>'
 ?>
  <script>
     <?php include '../../templates/app.js' ?>

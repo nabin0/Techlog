@@ -1,1 +1,30 @@
-awdsfojsfdiiiiiiiiiiiiiiiiddddddrrreseeeeeeeeeeeeeeeeeeeeeeeerrrrrrrreeeerewrriii88888i
+
+/* Css from <container> here */
+.container{
+width: 80%;
+margin: 0 auto;
+
+}
+.postHead{
+    flex-direction: column;
+    margin: 20px 0px;
+}
+.postHead img{
+    width: 30%;
+}
+.date{
+    color: blue;
+    font-size: 12px;
+    font-weight: bold;
+}
+.content{
+    color: var(--dark);
+}
+.category{
+    color: var(--dark);
+    display: inline-block;
+    width: auto;
+    padding: 4px;
+    background: rgb(145, 255, 2);
+    font-weight: bold;
+}
