@@ -1,0 +1,127 @@
+/* Container */
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+    /* max-width: 1200px;  background-color: #080808; */
+  }
+  
+  .box {
+    position: relative;
+    min-width: 320px;
+    max-width:500px;
+    height: 440px;
+    box-shadow: inset 5px 5px 2px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    margin: 0 20px;
+    border-radius: 12px;
+    margin: 40px;
+    box-sizing: border-box;
+  }
+  
+  .card {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    background: var(--palelight);
+    color: var(--dark);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .card:hover {
+    transform: translateY(-50px);
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+    background: #1a1b1a;
+  }
+  
+  .content {
+    color: var(--dark);
+    padding: 12px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+.content img{
+    width: 100%;
+}
+  .txt-content{
+      display: flex;
+      flex-direction: column;
+  }
+  .content .txt-content h3 {
+    position: relative;
+    margin-top: 5px;
+    float: left;
+    text-align: left;
+    color: var(--dark);
+  }
+  
+  .content .txt-content .date {
+color: #0b0ed1;
+margin-bottom: 10px;
+  }
+  
+  .content p {
+      display: block;
+    font-size: 1em;
+    color: var(--dark);
+    letter-spacing: 1.7px;
+    word-spacing: 2.5px;
+    text-align: justify;
+  }
+  
+  .content a {
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 5px 15px;
+    border-radius: 12px;
+    box-shadow: 5px 3px 2px rgba(0, 0, 0, 0.2);
+    color: var(--light);
+  }
+  
+  .box:nth-child(1) .content a {
+    background: #0bd11c;
+  }
+  .box:nth-child(2) .content a {
+    background: #ebc90a;
+  }
+  .box:nth-child(3) .content a {
+    background: #dd0606;
+  }
+  .box:nth-child(4) .content a {
+    background: #0b0ed1;
+  }
+  .box:nth-child(5) .content a {
+    background: #e65b0b;
+  }
+  .box:nth-child(6) .content a {
+    background: #d10b96;
+  }
+  .box:nth-child(7) .content a {
+    background: #0b88d1;
+  }
+  .box:nth-child(8) .content a {
+    background: #43d10b;
+  }
+  .box:nth-child(9) .content a {
+    background: #3a3b58;
+  }
+  .box:nth-child(10) .content a {
+    background: #fcfcff;
+    color: var(--dark);
+  }
+  

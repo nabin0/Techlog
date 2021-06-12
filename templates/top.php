@@ -12,7 +12,7 @@
 <body>
     <section>
         <header>
-            <a href="../../index.html" class="logo">TECHBLOG</a>
+            <a href="../../index.html" class="logo">TECHLOG</a>
             <div class="toggle">
                 <div class="menu-btn"></div>
             </div>
@@ -33,8 +33,8 @@
                 ?>
                 <li class="header-nav-list-itm"><a href="about.php" style="--i:1;" <?php echo $aboutOn ?> >About Us</a></li>
                 <li class="header-nav-list-itm"><a href="contact.php" style="--i:2;"  <?php echo $contactOn ?>>Contact Us</a></li>
-                <li class="header-nav-list-itm"><a href="readBlogs.php" style="--i:3;"  <?php echo $readOn ?>>Read Blogs</a></li>
-                <li class="header-nav-list-itm"><a href="signIn.php" style="--i:4;"  <?php echo $signinOn ?>>Sign In</a></li>
+                <li class="header-nav-list-itm"><a href="readblogs.php" style="--i:3;"  <?php echo $readOn ?>>Read Blogs</a></li>
+                <li class="header-nav-list-itm"><a href="signup.php" style="--i:4;"  <?php echo $signinOn ?>>Sign Up</a></li>
                 <li class="header-nav-list-itm"><a href="#" style="--i:5;">
                         <span class="themeText" id="themeMode">
                             <i class="fa fa-moon-o" id="themeText" style="font-weight: bold;">Dark</i>
