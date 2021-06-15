@@ -1,68 +1,162 @@
-.container {
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
+
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
 }
-.container h3 {
-  text-align: center;
-  color: var(--dark);
-  margin: 10px 0;
-}
-.container form {
+section{
+  position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
 }
-form .inprow {
+section::after{
+  position: absolute;
+  content: ' ';
+  top: 0;
+  left: 0;
+  background: url("../image/bg.jpg");
+  z-index: -1;
+  filter: blur(3px);
   width: 100%;
+  height: 100%;
+
+}
+section .container{
+  border-radius: 40px;
+  position: relative;
+  width: 800px;
+  height: 550px;
+  background: linear-gradient(#ff7700,#ff3068);
+  box-shadow: 0 15px 50px rgba(0,0,0,.1);
+  display: flex;
+  overflow: hidden;
+}
+section .container .left
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+section .container .left img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section .container .left .textOver{
+ position: absolute;
+ top: 0;
+ left: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 8em;
+ width: 100%;
+ height: 100%;
+ color: #fff;
+}
+section .container .left .textOver h1{
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+section .container .left .textOver h3{
+  text-align: center;
+  font-size: 1.2em;
+  
+}
+section .container .right
+{
+  position: relative;
+  width: 100%;
+  background: rgba(0,0,0,.2);
+  height: 100%;
   display: flex;
   align-items: center;
-  align-content: center;
-  margin: 10px 0px;
+  justify-content: center;
+  padding: 40px;
 }
-label {
-  display: inline-block;
-  width: 15%;
-  font-weight: bold;
-  font-family: cursive;
-}
-input {
-  width: 65%;
-  color: blue;
-  font-weight: bold;
-  font-family: cursive;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid gray;
-  background: none;
-  height: 30px;
-}
-
-button {
-  border: 2px solid #d2bdff;
-  height: 50px;
-  width: 200px;
-  border-radius: 4px;
+section .container .right form input
+{
   position: relative;
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  margin: 25px;
-  background: var(--dark);
-  color: var(--light);
-  align-self: center;
-  opacity: 0.7;
-  transition: all 200ms linear;
-}
-button:hover {
-  opacity: 1;
-}
-
-.errormsg {
-  font-weight: bold;
+  border-radius: 3px;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
   font-size: 14px;
-  color: red;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
-.successMsg {
-  color: green;
+section .container .right form input[type="submit"]
+{
+  max-width: 100px;
+  margin-left: 30%;
+  background: linear-gradient(90deg,#ff7700,#ff3068);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 3px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+section .container .right form input[type="submit"]:hover
+{
+  background:  linear-gradient(90deg,#e67009,#e02d5d);
+}
+section .container .right form .signup
+{
   text-align: center;
+  position: relative;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+section .container .right form .signup a{
+  font-weight: 600;
+  text-decoration: none;
+  color: #500483;
+}
+section .container .right form h1{
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+@media (max-width: 990px)
+{
+  section .container
+  {
+      max-width: 400px;
+      
+  }
+  section .container .left
+  {
+      display: none;
+
+  }
+  section .container .right
+  {
+      width: 100%;
+  }
 }
