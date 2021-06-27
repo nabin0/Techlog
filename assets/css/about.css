@@ -48,11 +48,16 @@
     position: relative;
     width: 100%;
     height: 100%;
+    transition: all .5s;
+}
+.container .meet-team .flex-div .card:hover img
+{
+    transform: scale(0);
 }
 .container .meet-team .flex-div .card .prson-desc{
     transition: .5s;
     position: absolute;
-    top: -100%;
+    top: 0;
     left: 0;
     height: 100%;
     width: 100%;
@@ -63,11 +68,14 @@
     padding: 20px;
     flex-direction: column;
     backdrop-filter: blur(5px);
+    transform: scale(0) rotate(-180deg);
+    transition: all .4s;
+    transition-delay: 0.2s;
+    opacity: 0;
 }
 .container .meet-team .flex-div .card:hover .prson-desc{
-    position: absolute;
-    top: 0;
-    left: 0;
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
 }
 .container .meet-team .flex-div .card .prson-desc h3{
     font-size: 2em;

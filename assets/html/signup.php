@@ -4,51 +4,34 @@
 </style>
 <?php include './php/signupHandle.php' ?>
 <!-- Other Content goes here -->
-<div class="container">
 <?php 
 echo $displayMsg ;
 ?>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-
-        <div class="inprow">
-            <label for="fname">First Name: </label>
-            <input type="text" name="fname" id="fname" placeholder="Enter your first name here"><span class="errormsg"><?php echo $fnameErr ?></span>
+<section>
+    <div class="container">
+        <div class="left">
+            <img src="../image/left.jpg">
+            <div class="textOver">
+                    <h1>Welcome Here</h1>
+                    <h3>We're Happy To See Ya</h3>
+            </div>
         </div>
-
-        <div class="inprow">
-            <label for="lname">Last Name: </label>
-            <input type="text" name="lname" id="lname" placeholder="Enter your last name here"><span class="errormsg"><?php echo $lnameErr ?></span>
+        <div class="right">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                <h1>Sign Up</h1>
+                <input type="text" name="fname" id="fname" placeholder="Name"><span class="errormsg"><?php echo $fnameErr ?></span>
+                <input type="text" name="lname" id="lname" placeholder="Userame"><span class="errormsg"><?php echo $lnameErr ?></span>
+                <input type="tel" name="phone" id="phonr" placeholder="Phone number(with country code)"><span class="errormsg"><?php echo $phoneErr ?></span>
+                <input type="text" name="email" id="email" placeholder="Email"><span class="errormsg"><?php echo $emailErr ?></span>
+                <input type="date" name="dob" id="dob" placeholder="Date of birth"><span class="errormsg"><?php echo $dobErr ?></span>
+                <input type="text" name="password" id="password" placeholder="Password"><span class="errormsg"><?php echo $passwordErr ?></span>
+                <input type="text" name="cPassword" id="cPassword" placeholder="Confirm Password"><span class="errormsg"><?php echo $cPasswordErr ?></span>
+                <input type="submit" value="Sign up">
+                <p class="signup">Already have an account <a href="login.php">Log in</a></p>
+            </form>
         </div>
-
-        <div class="inprow">
-            <label for="phone">Phone no: </label>
-            <input type="tel" name="phone" id="phonr" placeholder="Enter your Phone number here (with country code)"><span class="errormsg"><?php echo $phoneErr ?></span>
-        </div>
-
-        <div class="inprow">
-            <label for="email">Email: </label>
-            <input type="text" name="email" id="email" placeholder="Enter your email here"><span class="errormsg"><?php echo $emailErr ?></span>
-        </div>
-
-        <div class="inprow">
-            <label for="fname">DOB: </label>
-            <input type="date" name="dob" id="dob" placeholder="Enter your Date of birth."><span class="errormsg"><?php echo $dobErr ?></span>
-        </div>
-
-        <div class="inprow">
-            <label for="fname">password: </label>
-            <input type="text" name="password" id="password" placeholder="Enter your Password"><span class="errormsg"><?php echo $passwordErr ?></span>
-        </div>
-
-        <div class="inprow">
-            <label for="fname">Confirm Password: </label>
-            <input type="text" name="cPassword" id="cPassword" placeholder="Enter same password as above"><span class="errormsg"><?php echo $cPasswordErr ?></span>
-        </div>
-
-            <button type="submit" id="submitBtn">Sign in</button>
-  
-    </form>
-</div>
+    </div>
+</section>
 <script>
     <?php include '../../templates/app.js' ?>
 </script>

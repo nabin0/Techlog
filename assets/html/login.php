@@ -37,7 +37,7 @@ echo '<div class="msg">'.$user.'</div';
                       <input type="text" name="username" placeholder="Username">
                       <input type="password" name="password" placeholder="Password">
                       <input type="submit" name="" id="submit-btn" value="Log in">
-                      <p class="signup">Don't have an account?<a href="./signup.php">Sign In</a></p>
+                      <p class="signup">Don't have an account?<a href="signup.php">Sign Up</a></p>
                   </form>
               </div>
           </div>
