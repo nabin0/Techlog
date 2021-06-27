@@ -143,6 +143,13 @@ section .container .right form h1{
   margin-bottom: 10px;
   color: #555;
 }
+.errormsg{
+  font-size: 10px;
+  color: red;
+  position: absolute;
+  right: 20%;
+  margin-top: 5%;
+}
 @media (max-width: 990px)
 {
   section .container
